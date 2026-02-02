@@ -1,0 +1,95 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+     background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(h11.png);
+     size: 100%;          
+}
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.card{
+    width: 250px;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0, 2);
+    margin: 20px;
+    transition: 0.5s;
+}
+.card img{
+    width: 250px;
+    height: 150px;
+    align-items: center;
+    
+}
+.card:hover{
+    transform: translateY(-15px);
+    background-color: rgb(245, 230, 200);
+}
+.card-container{
+    padding: 16px;
+    text-align: center;
+}
+.card-container h3{
+    font-size: 15px;
+    margin-bottom: 8px; 
+    color: rgb(255, 0, 0);
+    text-align: center;
+    margin-left: 80px;
+}
+.card-container p{
+    color: rgb(0, 0, 0);
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+.card-container .btn{
+    display: inline-block;
+    background-color: transparent;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top:25px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 25px;
+   
+}
+.card-container a{
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 5px;
+    color: rgb(243, 222, 243); 
+    margin-top: 50px;
+}
+
+h1{
+    color: rgb(255, 0, 0);
+    font-size: 35px;
+    margin-top: 30px;
+}
+h2{
+    text-align: center;
+    color: rgb(0, 0, 0);
+  font-size: 25px;
+  padding-top: 2px;
+}
+h3{
+    text-align: left;
+    color: rgb(12, 88, 5);
+  font-size: 14px;
+  padding-top: 40px;
+}
+.buy .btn{
+    border-radius: 35px;
+    background-color: rgb(14, 71, 33);
+    height: 50px;
+    width: 180px;
+    padding-top: 10px;
+}

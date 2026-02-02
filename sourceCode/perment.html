@@ -1,0 +1,246 @@
+<html>
+    <head>
+        <meta name="viweport" content="width=device=width, iniyial-scale=1.0">
+        <title>Shanu Bro</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="visa.css">
+        
+    </head>
+    <style>
+       
+    </style>
+    <body>
+    
+    
+        <div class="banner">
+             <img src="images/Lg11.png" class="logo">
+            <div class="navbar">
+           
+    <!--Page menu-->
+            <div class="menu">
+            <ul>
+                <li><a href="Website.html"><p>Home</p></li>
+                <li><a href="about.html"><p>About Us</p></a></li>
+                <li><a href="product.html"><p>Proudct</p></a></li>
+                <li><a href=""><p>Repair</p></a></li>
+                <li><a href="Contact page.html"><p>Contact</p></a></li>
+                <li><a href="Login page.html"><p>Login</p></a></li> 
+            </ul>
+            
+        </div>
+        
+            </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shanu bro</title>
+
+</head>
+<style>
+    background-image:url(webph/pr1.jpg);
+
+
+
+.payment-container {
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgb(39, 1, 1);
+    padding: 20px 30px;
+    max-width: 900px;
+    width: 100%;
+}
+
+h2 {
+    font-size: 45px;
+    margin: 0;
+    text-align: center;
+}
+
+h4 {
+    font-size: 14px;
+    color: #112f66;
+    text-align: right;
+}
+
+h5 {
+    font-size: 20px;
+    color: #031b46;
+    text-align: right;
+}
+
+h6 {
+    font-size: 14px;
+    color: #0fb0c5;
+    text-align: right;
+}
+
+.payment-content {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.payment-options, .payment-settings {
+    flex: 1;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.option {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.card-icons img {
+    width: 40px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.card-details input {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.price-summary {
+    margin: 20px 0;
+    text-align: right;
+}
+
+.price-summary p {
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+</style>
+<body>
+    <div class="payment-container">
+        <h2>Payment Method</h2><button class="back-btn" onclick="window.history.back();">Back</button>
+
+        <div class="payment-content">
+            <div class="payment-options">
+                <h3>Payment options</h3>
+                <form action="#">
+                    <div class="option">
+                        <input type="radio" id="credit-card" name="payment" checked>
+                        <label for="credit-card">Credit / Debit card</label>
+                        <div class="card-icons">
+                            <img src="visa.jpg" alt="Visa">
+                            <img src="mmm.jpg" alt="MasterCard">
+                            
+                        </div>
+                        <div class="card-details">
+                            <input type="text" placeholder="First Name" required>
+                            <input type="text" placeholder="Last Name" required>
+                            <input type="text" placeholder="Card Number" required>
+                            <input type="text" placeholder="Expiration Date (MM/YY)" required>
+                            <input type="text" placeholder="CVV" required>
+                        </div>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" id="paypal" name="payment">
+                        <label for="paypal">COD</label>
+                        <p>Secure online payments through the PayPal portal</p>
+                    </div>
+                    
+                    <li><a href="contact us.html">contact Us</a></li>
+                </form>
+            </div>
+
+            <div class="payment-settings">
+                <h3>Payment settings</h3>
+                <h5><strong>Basic plan</strong></h5>
+                <ul>
+                    <li> <strong>Transaction date : 2024/11/30</strong></li>
+                    <br>
+                    <li><strong>Time : 10:45 AM</strong></li>
+                </ul>
+                <div class="price-summary">
+                    <h4><strong>Subtotal: RS 50000</strong></h4><br>
+                    <h4><strong>Discount: RS 2000</strong></h4><br>
+                    <h5><strong>Total: RS 48000</strong></h5>
+                </div>
+                <a href="thank.html"><button type="submit">Done</button></a>
+                
+            </div>
+        </div>
+    </div>
+   
+    <script>
+        const creditCardOption = document.getElementById('credit-card');
+const paypalOption = document.getElementById('paypal');
+const cardDetails = document.querySelector('.card-details');
+
+creditCardOption.addEventListener('change', () => {
+    if (creditCardOption.checked) {
+        cardDetails.style.display = 'block';
+    }
+});
+
+paypalOption.addEventListener('change', () => {
+    if (paypalOption.checked) {
+        cardDetails.style.display = 'none';
+    }
+});
+    </script>
+
+
+<!--footer-->
+<footer>
+    <div class="footer-content">
+        <h3>Shanu Technology & grapic works</h3>
+        <ul class="socials">
+            <li><center><a href=""> <img src="images/Facebook.png" width="30px"></a>
+                        <a href="https://www.youtube.com/@SHANUBRO2003"> <img src="images/you tube.png" width="30px"></a>
+                        <a href="https://www.tiktok.com/@shanu_bro.lk?_t=ZS-8rhpnHyu3Ds&_r=1"> <img src="images/tiktok.png" width="30px"></a>
+                        <a href="#"> <img src="images/email.png" width="30px"></a>
+                        <a href="#"> <img src="images/linkedin.png" width="30px"></a></center></li>
+        </ul>
+        <p>Welcome to ShanuBro.lk, your ultimate destination for all things tech in Sri Lanka. Proudly under the umbrella of Shanu Technology (PVT) LTD, we are dedicated to providing you with a<br>wide array of cutting-edge products and accessories to suit your digital lifestyle needs.<br><br>CONTACT US : +94 76 066 7028</p>
+
+    </div>
+        
+         
+     
+
+</footer>
+</div>
+</body>
+
+
+
+</html>

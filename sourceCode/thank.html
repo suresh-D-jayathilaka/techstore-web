@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shanu bro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+   body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #0a032c;
+  background-image: linear-gradient(rgba(0, 60, 65, 0.75),rgba(0, 60, 65, 0.75)),url(images/h11.png);
+  background-size: 100% 100%;
+
+}
+
+.container {
+  text-align: center;
+  background: #b2d8df;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(35, 69, 180, 0.1);
+  width: 80%;
+  max-width: 500px;
+}
+
+.checkmark {
+  width: 50px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #0e6363;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+strike{
+    color: rgb(95, 45, 36);
+}
+p {
+  color: #0a1e53;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.download-btn {
+  background-color: #2fb984;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+.download-btn:hover {
+  background-color: #1ac38b;
+}
+
+.share-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.share-btn {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.facebook {
+  background: #3b5998;
+  color: #fff;
+}
+
+.Tiktok {
+  background: #000000;
+  color: #fff;
+}
+
+.linkedin {
+  background: #0077b5;
+  color: #fff;
+}
+
+.YouTube {
+  background: #e60023;
+  color: #fff;
+}
+
+.share-btn:hover {
+  opacity: 0.9;
+} 
+</style>
+<body>
+  <div class="container">
+    <div class="content">
+     
+      <h1>Thank You!</h1>
+      <p>Share your experience with your friends about our reliable service</p>
+     <a href="Website.html" ><button class="download-btn">successfully</button></a>
+      <p><strike> with your friends and colleagues:</strike></p>
+      <div class="share-buttons">
+        <button class="share-btn facebook"> Facebook</button>
+        <button class="share-btn Tiktok"> Tiktok</button>
+        <button class="share-btn linkedin"> LinkedIn</button>
+        <button class="share-btn YouTube"> You Tube</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.querySelector('.download-btn').addEventListener('click', () => {
+  alert('Thank you , Come again...!');
+});
+
+const shareButtons = document.querySelectorAll('.share-btn');
+shareButtons.forEach(button => {
+  button.addEventListener('click', (e) => {
+    const platforSm = e.target.textContent.split(' ')[2];
+    alert(Sharing);
+  });
+});
+  </script>
+</body>
+</html>

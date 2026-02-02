@@ -1,0 +1,29 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+     background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(h11.png);
+     size: 100%;          
+}
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.card{
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px;
+
+}
+.card img{
+    width: 1000px;
+    height: 500px;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+}

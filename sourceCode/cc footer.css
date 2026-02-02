@@ -1,0 +1,22 @@
+/*footer*/
+.footer-content{
+    margin-top: 550px;
+    height: 153px;
+    width: 1583px;
+    background:radial-gradient(#164077,#0f0e3d);
+    text-align: center;
+}
+.footer-content h3{
+    font-family: cursive;
+    font-size: 25px;
+    color: #dfa425;
+    text-align: center;
+}
+.footer-content p{
+    font-family: Monospace;
+    color: #ffffff;
+}
+.socials{
+    align-items: center;
+    margin-top: 10px;
+}

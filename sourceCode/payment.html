@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <meta name="viweport" content="width=device=width, iniyial-scale=1.0">
+        <title>Shanu Bro</title>
+        <link rel="stylesheet" href="payment.css">
+        
+    </head>
+    </div>  
+    
+    <button class="back-btn" onclick="window.history.back();">Back</button>  
+    
+    <!-- Cart Items -->
+    <div class="cart-items" id="cart-items">
+        <!-- Items will be dynamically added here -->
+    </div>
+
+    <!-- Total Price -->
+    <div class="total-price-container">
+        <span>Total:</span>
+        <span id="total-price">Rs0.00</span>
+    </div>
+
+    <!-- Checkout Button -->
+    <a href="perment.html"><button class="checkout-btn" onclick="alert('Proceed to checkout')">Proceed to Checkout</button></a>
+</div>
+
+<script>
+    // Cart Data (Item name, price, quantity, and image URL)
+    const cart = [
+        { name: "Monitor", price: 15000.00, quantity: 1, image: "images/Moni02.png" },
+        { name: "VGA Card", price: 34000.00, quantity: 1, image: "images/Vga01.png" },
+        { name:"Acer",price: 225000.00, quantity: 1, image: "images/Ac03.png" },
+        { name:"Asus",price: 315000.00, quantity: 1, image: "images/As02.png" },
+        { name:"RAM",price: 25000.00, quantity: 1, image: "images/ram 01.png" },
+    ];
+
+    // Function to display the cart items
+    function displayCart() {
+        const cartItemsContainer = document.getElementById('cart-items');
+        cartItemsContainer.innerHTML = ''; // Clear current cart items
+
+        let total = 0;
+
+        cart.forEach((item, index) => {
+            // Calculate total price
+            total += item.price * item.quantity;
+
+            // Create cart item element
+            const cartItem = document.createElement('div');
+            cartItem.classList.add('cart-item');
+            cartItem.innerHTML = `
+                <img src="${item.image}" alt="${item.name}">
+                <div class="item-info">
+                    <h4>${item.name} x${item.quantity}</h4>
+                    <p>Quantity: ${item.quantity}</p>
+                </div>
+                <div class="item-price">Rs${(item.price * item.quantity).toFixed(2)}</div>
+                <div class="quantity-container">
+                    <button onclick="updateQuantity(${index}, -1)">-</button>
+                    <span>${item.quantity}</span>
+                    <button onclick="updateQuantity(${index}, 1)">+</button>
+                </div>
+                <button onclick="removeItem(${index})">Remove</button>
+            `;
+            cartItemsContainer.appendChild(cartItem);
+        });
+
+        // Update the total price
+        document.getElementById('total-price').innerText = `Rs${total.toFixed(2)}`;
+    }
+
+    // Function to update item quantity
+    function updateQuantity(index, change) {
+        cart[index].quantity += change;
+        if (cart[index].quantity < 1) {
+            cart[index].quantity = 1;
+        }
+        displayCart();
+    }
+
+    // Function to remove an item
+    function removeItem(index) {
+        cart.splice(index, 1);
+        displayCart();
+    }
+
+    // Initialize the cart
+    displayCart();
+</script>
+
+</body>
+</html>
